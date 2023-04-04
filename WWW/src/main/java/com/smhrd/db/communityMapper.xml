@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smhrd.model.communityDAO">
+	<select id="CommunityAllSearch" resultType="com.smhrd.model.communityDTO">
+		<!-- 전체 커뮤니티 글 조회 (좋아요 순으로!) -->
+		select *
+		from tb_community
+		order by c_likes desc
+	</select>
+	
+	<insert id="communityInsert" parameterType="com.smhrd.model.communityDTO">
+		INSERT INTO TB_COMMUNITY (
+			C_CONTENT,
+			C_DATE,
+			C_LIKES,
+			C_HASHTAG,
+			USER_ID
+		)
+		VALUES (
+			#{c_content},
+			#{c_date},
+			#{c_likes},
+			#{c_hashtag},
+			#{user_id}	
+		)
+	</insert>
+	<update id="UpLike" parameterType="com.smhrd.model.communityDTO" >
+		update tb_community 
+		set c_likes = c_likes + 1 
+		where c_idx = #{c_idx}
+	</update>
+	
+	<update id="DownLike" parameterType="com.smhrd.model.communityDTO">
+		update tb_community
+		 set c_likes = c_likes - 1 
+		 where c_idx = #{c_idx}
+	</update>
+	<delete id="deleteCommunity" parameterType="com.smhrd.model.communityDTO">
+		delete from tb_community
+		where c_idx = #{c_idx}
+	</delete>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smhrd.model.commentDAO">
+	<select id="commentAllSearch" resultType="com.smhrd.model.commentDTO">
+		select *
+		from tb_comment
+		order by cmt_idx desc
+	</select>
+	
+	<insert id="addComment" parameterType="com.smhrd.model.commentDTO">
+		INSERT INTO TB_COMMENT
+		(C_IDX,
+		CMT_CONTENT,
+		CMT_DT,
+		USER_ID
+		)
+		VALUES
+		(#{c_idx},
+		#{cmt_content},
+		#{cmt_dt},
+		#{user_id}
+		)
+	</insert>
+	<delete id="deleteComment" parameterType="com.smhrd.model.commentDTO">
+		delete from tb_comment
+		where 
+		cmt_idx = #{cmt_idx}
+	</delete>
+</mapper>

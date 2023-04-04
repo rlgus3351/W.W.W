@@ -1,0 +1,194 @@
+
+.comm_top{
+	display : flex;
+}
+/* main 전부 가져온부분 */
+/* 리스트 점 제거 */
+li {
+    list-style-type: none;
+}
+/* 영화 div 설정 */
+.slide_wrapper {
+    
+    position: relative;
+    width: 1146px;
+    margin: 0 auto;
+    height: 243px;
+    overflow: hidden;
+}
+
+
+/* 영화 list 설정 */
+.slides {
+    padding: 0 !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.7s ease-out;
+    margin-left : 10px;
+}
+/* 영화, 액션, 호러 메인 영화 마진 설정 및 정렬 */
+.slides li:not(:last-child) {
+    float: left;
+    margin-right: 20px;
+}
+
+/* prev 버튼 공통 설정 */
+.prev{
+	cursor : pointer;
+    top: 85.5px;
+    position: absolute;
+    text-align: center;
+    font-size : 30px;
+    z-index : 5;   
+    text-decoration: none;
+    color:white;
+    padding: 10px 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    left:10px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(255,118,0,0.85);
+  color: white;
+}
+/* next 버튼 설정 */
+.next {
+	cursor : pointer;
+    top: 85.5px;
+    left: 1091px;
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    text-decoration: none;
+    color:white;
+    padding: 10px 20px;
+    transition: 0.6s ease;
+    font-size : 30px;
+    border-radius: 3px 0 0 3px;
+    left: 1540px;
+}
+
+/* 플레이리스트 버튼 위치 설정 */
+.slide_wrapper >button{
+	    top: 200px;
+}
+
+.slide_wrapper a{
+	top :195px;
+}
+
+
+
+
+/* 플레이리스트 div */
+
+#movie2{
+	position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+
+
+#movie3 {
+    position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+
+#movie4 {
+    position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+#movie5 {
+    position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+#movie6 {
+    position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+#movie7 {
+    position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+#movie8 {
+    position: relative;
+    width: 1605px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+}
+
+
+
+
+/* 플레이리스트 포스터 z-index 및 위치 설정 */
+.a{
+    
+    left:120px;
+    top: 30px;
+    z-index: 2;
+}
+.b{
+    z-index: 3;
+}
+.c{
+    top: 40px;
+    right:110px;
+    z-index: 2;
+}
+
+/* 플레이리스트 포스터 관계 설정 및 테두리 radius */
+.contain img{
+    position: relative;
+    border-radius: 7px;
+
+}
+/* 플레이 리스트 글자 */
+.p{
+    margin-top: 70px;
+    text-align: center;
+    color:white ;
+}
+/* 좋아요 글자 */
+p{
+    text-align: center;
+    color:white
+}
+
+/* 플레이리스트 테두리 */
+.contain{
+    margin-top: 10px;
+    width: 515px;
+    height:420px;
+    background-color: #000000;
+    display: inline-block;
+    box-shadow: 0px 0px 5px 5px #162336;
+    border-radius: 20px;
+}
+
+hr{
+	border: solid 1px white !important; 
+	width : 1700px !important;
+	margin-left : 100px !important;
+	
+}
+
+

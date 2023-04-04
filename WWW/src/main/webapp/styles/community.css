@@ -1,0 +1,53 @@
+#playlist_tag{
+    width: 1146px;
+    color: white;
+    margin:0 auto;
+}
+.card.bg-light{
+    width: 1146px !important;
+    margin: auto;
+    background-color: black !important;
+}
+.ms-3{
+    color: white;
+}
+form{
+    position: relative;
+}
+#review{
+    position: absolute;
+    bottom: 6px;
+    left: 1087px;
+}
+.card-body{
+    padding: 0 !important;
+}
+#review{
+    padding: 0.3% 0.7%;
+    background-color:  #212529;
+    color: white;
+    border-radius: 5px;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animatable {
+    animation-play-state: paused;
+}
+
+/*화면에 표출된 후*/
+.animated {
+    animation-name: fadeInUp;
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 4s;
+    animation-play-state: running;
+}

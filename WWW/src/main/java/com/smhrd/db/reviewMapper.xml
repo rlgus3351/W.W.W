@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smhrd.model.reviewDAO">
+	<select id="reviewAll" parameterType="com.smhrd.model.reviewDTO" resultType="com.smhrd.model.reviewDTO">
+		<!-- select 아이디는 search 반환 타입은 contentDTO -->
+		<!-- sql문 : 테이블에 있는 모든 정보를 평점 내림차순으로 정렬-->
+		select *
+		from tb_review
+		order by review_idx desc
+		<!-- 
+		select review_idx,v_idx,review_content,To_char(review_dt),user_id
+		from (select review_idx,v_idx,review_content, to_date(review_dt) as review_dt,user_id
+		from tb_review
+		order by review_dt desc)
+		 -->
+	</select>
+	<insert id="reviewWrite" parameterType="com.smhrd.model.reviewDTO">
+		<!-- select 아이디는 search 반환 타입은 contentDTO -->
+		<!-- sql문 : 테이블에 있는 모든 정보를 평점 내림차순으로 정렬-->
+		INSERT INTO tb_review
+    	(v_idx, 
+    	review_content, 
+    	review_dt, 
+    	user_id)
+		VALUES
+    	(#{v_idx}, 
+    	#{review_content}, 
+    	#{review_dt}, 
+    	#{user_id});
+	</insert>
+	
+	
+	<insert id="InsertReview" parameterType="com.smhrd.model.reviewDTO">
+		<!-- 리뷰 생성 -->
+		INSERT INTO tb_review
+    	(
+    	v_idx, 
+    	review_content, 
+    	review_dt, 
+    	user_id
+    	)
+		VALUES
+    	(
+    	#{v_idx}, 
+    	#{review_content}, 
+    	#{review_dt}, 
+    	#{user_id}
+    	)
+	</insert>
+	<delete id="reviewDelete" parameterType="com.smhrd.model.reviewDTO">
+		<!-- 리뷰 삭제 -->
+		delete from tb_review
+		where review_idx = #{review_idx}
+	</delete>
+</mapper>

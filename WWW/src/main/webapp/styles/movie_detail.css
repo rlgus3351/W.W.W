@@ -1,0 +1,208 @@
+body {
+    background-color: black !important;
+    height: 1000px;
+}
+
+
+
+
+
+.wrapper {
+    background-color: black;
+    width: 1500px;
+    margin-left: 290px;
+    border-radius : 50px;
+	margin-top : 170px;
+}
+
+
+
+/*메인에 대표 포스터 이미지*/
+.background {
+	background: rgb(6,13,23);
+	background: linear-gradient(0deg, rgba(6,13,23,1) 0%, rgba(255,255,255,1) 100%);
+    background-size: cover;
+    height : 500px;
+    text-align: center;
+
+}
+
+
+
+/* 상세 페이지에 있는 포스터 이미지 */
+.poster_img {
+    position: relative;
+    /*대표이미지랑 겹치기*/
+    margin-left: 100px;
+    width: 300px;
+    height: 500px;
+    margin-top: 50px
+}
+
+
+/* 정보모음(평점/장르/연령 등) */
+.information {
+    color: white;
+    width: 300px;
+    height: 100px;
+    margin-top: 50px;
+    font-size: 15pt;
+
+}
+
+/* 오른쪽 왼쪽 묶는 부분*/
+.contents_wrap {
+	/*위오아왼*/
+	padding : 40px 0px 0px 0px;
+    width: 1300px;
+    /* a랑 b의 부모요소에 inlineBlock을 넣어줘야지
+    footer가 밑으로 내려감!! */
+    display: inline-block;
+    background-color: rgba(6,13,23);
+    border-radius : 50px;
+    box-shadow: 5px 5px 5px 5px rgba(6,13,23);
+
+}
+
+/* 왼쪽으로 쌓아야됨 (밑이 아니라 그래서 float: left 넣어줌) */
+#a {
+    float: left;
+}
+
+#b {
+    width: 58%;
+    float: left;
+    /*마찬가지*/
+    color: white;
+    position: relative;
+    /*배경 이미지 위에 쓸라면 이거 필요*/
+    margin-left: 60px;
+
+}
+
+
+
+
+
+.btn-outline-warning {
+    --bs-btn-color: #fcfbf9 !important;
+    --bs-btn-border-color: #ff7600 !important;
+    --bs-btn-hover-color: #ff7600 !important;
+    --bs-btn-hover-bg: #ff7600 !important;
+    --bs-btn-hover-border-color: #ff7600 !important;
+    --bs-btn-focus-shadow-rgb: 255, 193, 7;
+    --bs-btn-active-color: #f3f1f1 !important;
+    --bs-btn-active-bg: #ff7600 !important;
+    --bs-btn-active-border-color: #ff7600 !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+    --bs-btn-disabled-color: #ff7600 !important;
+    --bs-btn-disabled-bg: transparent !important;
+    --bs-btn-disabled-border-color: #ff7600 !important;
+    --bs-gradient: none;
+
+}
+
+#navbarCollapse a {
+    font-weight: 549 !important;
+}
+
+
+.play{
+	border: 2px solid gray;
+}
+
+/*스크롤 하는 기능*/
+.scroll_contatiner {
+	width: 767px;
+	height: 140px;
+	overflow: auto;
+	margin-top : 30px;
+}
+
+.scroll_contatiner::-webkit-scrollbar {
+	width: 15px;
+}
+
+.scroll_contatiner::-webkit-scrollbar-thumb {
+	background-color:#1A1A3A;
+	border-radius: 10px;
+	background-clip: padding-box;
+	border: 2px solid transparent;
+}
+
+.scroll_contatiner::-webkit-scrollbar-track {
+	background-color: rgba(6,13,23);
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px white;
+}
+/*스크롤 하는 기능*/
+
+
+#review{
+    padding: 0.3% 0.7%;
+    background-color:  #212529;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 7px;
+    left: 679px;
+}
+form{
+    position: relative;
+}
+
+.form-control{
+	border-radius: 0.375erm;
+}
+
+.btn.btn-outline-warning{
+	float : right;
+}
+/* .btn {
+    --bs-btn-padding-x: 1.0rem !important;
+    --bs-btn-padding-y: 0.6rem !important;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 3.0;
+    --bs-btn-color: #212529;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-width: 1px;
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: 0.375rem;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+
+
+
+
+
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+} */
+
+
+
+
+
+
+
+
+

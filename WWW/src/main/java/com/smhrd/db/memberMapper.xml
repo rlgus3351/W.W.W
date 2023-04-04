@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.smhrd.model.memberDAO">
+	<!-- Signup(회원가입) -->
+	<insert id="signup" parameterType="com.smhrd.model.memberDTO">
+		INSERT INTO tb_user
+		    (
+		    user_id, 
+		    user_pw, 
+		    user_nick, 
+		    user_gender, 
+		    user_birthdate, 
+		    user_joindate, 
+		    user_type
+		    )
+		VALUES
+		    (
+		    #{user_id},
+			#{user_pw},
+			#{user_nick},
+			#{user_gender},
+			#{user_birthdate},
+			#{user_joindate},
+			#{user_type}
+		    )
+	</insert>
+	
+	<!-- loing(로그인) -->
+	<select id="Login" resultType="com.smhrd.model.memberDTO" parameterType="com.smhrd.model.memberDTO">
+		SELECT * FROM TB_USER
+    WHERE (USER_ID =#{user_id} AND USER_PW =#{user_pw})
+
+	</select>
+	<select id = "selectAll" resultType="com.smhrd.model.memberDTO">
+		select *
+		from tb_user
+	</select>
+	
+</mapper>

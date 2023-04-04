@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mybatis 설정 파일임을 알려주는 스키마(xml안에서 사용할 수 있는 태그들의 정의) 구간 -->
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- DTD : document type definition -->  
+
+<!-- 1) mybatis 설정을 잡아주는 구간 -->
+<configuration>
+<!-- 2) 데이터 베이스들을 설정하는 구간 
+		default = development 한개 -->
+	<environments default="development">
+	<!-- 3) 데이터 베이스 한개에 대한 설정을 하는 구간 -->
+		<environment id="development">
+			<!-- 4) 트랜잭션 관리 타입 지정 
+					JDBC : commit, rollback mybatis 자체적으로 관리
+					MANAGED : commit, rollback 서버 관리 (자바 컨테이너)
+			-->
+			<transactionManager type="JDBC" />
+			<!-- 5) DB 연결 설정
+					- POOLED : connection 객체를 미리 생성해놓고 요청시 반환
+					- UNPOOLED : 요청할 때 마다 connection 객체를 생성
+					- JNDI 
+					Connection Pool
+			-->
+			<dataSource type="POOLED">
+			<!-- 6) Connection 객체를 생성할 때 필요한 내용들을 정리하는 구간 
+				    - driver, url, 계정정보(username, password)
+					
+			-->
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url" value="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe" />
+				<property name="username" value="cgi_3_230322_1" />
+				<property name="password" value="smhrd1" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!--  7) SQL 구문을 가지고 있는 mapper 파일들 중 어떤 걸 사용할 건지 정의하는 구간 -->
+	<mappers>
+		<!-- 8) 한개의 mapper 파일의 경로 -->
+		<mapper resource="com/smhrd/db/contentMapper.xml"/>
+		<mapper resource="com/smhrd/db/communityMapper.xml"/>
+		<mapper resource="com/smhrd/db/memberMapper.xml"/>
+		<mapper resource="com/smhrd/db/reviewMapper.xml"/>
+		<mapper resource="com/smhrd/db/boardMapper.xml"/>
+		<mapper resource="com/smhrd/db/commentMapper.xml"/>
+	</mappers>
+	
+	
+	
+</configuration>

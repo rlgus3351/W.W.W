@@ -1,0 +1,33 @@
+div a{
+	text-decoration: none !important;
+}
+/*영화 담는 왼쪽 공간 마진 주기*/
+.warpper {
+    margin-left: 450px;
+}
+/*화면에 표출되기 전*/
+.animatable {
+    animation-play-state: paused;
+}
+
+/*화면에 표출된 후*/
+.animated {
+    animation-name: fadeInUp;
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-play-state: running;
+}
+
+/* 건들지 마세요..ㅎ!*/ 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

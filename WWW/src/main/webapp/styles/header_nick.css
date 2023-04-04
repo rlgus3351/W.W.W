@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.header_nick{
+	color: white;
+	margin : 0;
+}
+#searchInput{
+	border-radius: 7px;
+}

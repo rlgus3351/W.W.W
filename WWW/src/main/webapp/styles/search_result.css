@@ -1,0 +1,63 @@
+#line{
+    border-color: white;
+}
+h3{
+    width: 1146px;
+    color: white;
+    margin:0 auto;
+}
+h2{
+    width: 1600px;
+    color: white;
+    margin:0 auto;
+}
+.movie_poster_result{
+    width: 1585px;
+    margin: 0 auto;
+}
+
+.scroll_playlist li:not(:last-child) {
+    float: left;
+    margin-right: 20px;
+}
+.scroll_playlist{
+    margin: 0 auto;
+    width: 1585px;
+}
+
+.scroll_search{
+    padding:0;
+}
+.none{
+	margin: 0 auto;
+    width: 1630px;
+}
+
+.none li:not(:last-child) {
+    float: left;
+    margin-right: 20px;
+}
+
+.list_cont li:not(:last-child) {
+    float: left;
+    margin-right: 20px;
+}
+
+.list_cont{
+	width: 1630px;
+	margin: 0 auto;
+}
+
+.search_movie_poster{
+	width: 1600px;
+	margin: 0 auto;
+}
+
+.result_title{
+	margin: 0;
+	text-align: left;
+	
+}
+.search_movie_poster p{
+	display: inline;
+}
